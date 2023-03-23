@@ -1,0 +1,79 @@
+%Pacotes
+\usepackage[english,brazil]{babel}%Idioma
+\usepackage[utf8]{inputenc}%Inserir acentos 
+\usepackage[T1]{fontenc}%Tipo de fonte usada na compilação
+\usepackage{hyphenat}%Habilita/desabilita hifenização
+%Ativar se necessário
+%\setlength{\parskip}{1\baselineskip}%Espaçamento de 1pt entre os parágrafos
+\usepackage{setspace}%Mudar espaçamento entre linhas
+\usepackage[a4paper,%
+            left=3.0cm,%
+            right=2.0cm,%
+            top=3.0cm,%
+            bottom=2.0cm]{geometry}
+\usepackage{graphicx}%inserir imagens
+\usepackage[x11names]{xcolor}%Texto colorido
+\usepackage{pdfpages}%Inserir páginas PDF
+\usepackage{multicol}%Criar multicolunas sem \tabular
+\usepackage{xurl}%Para disponibilizar o endereço do site
+\usepackage[breaklinks,hidelinks,colorlinks=true,allcolors=blue]{hyperref}%Configurar hiperlinks
+\usepackage{tabularx}%Tabelas mais fáceis
+\usepackage{booktabs}
+\usepackage{textcmds}%Digitar aspas com \qq e \q
+\usepackage{lipsum}%Gerar Lipsum
+\usepackage{indentfirst}%Indentar 1º§ de cada seção
+\usepackage{microtype}%Melhorar a justificação do texto
+
+
+%Referências e Citações
+\usepackage[alf,
+            abnt-emphasize=bf,%
+            abnt-etal-list=3,%
+            abnt-etal-text=emph,%
+            abnt-missing-year=sd,%
+            abnt-repeated-author-omit=yes,%
+            abnt-repeated-title-omit=yes,%
+            abnt-thesis-year=final,%
+            abnt-doi=link,%
+            ]{abntex2cite}
+
+%Comandos e Ambientes
+%Autor
+\newcommand{\me}{\begin{center}{André Alexandre Padilha Leitão}\end{center}}
+
+%Resumo
+\renewenvironment{abstract}
+  {\small\quotation
+  {\bfseries\noindent{\normalsize\abstractname}\par\nobreak\smallskip}}
+  {\endquotation}
+
+%Citação +3 linhas
+\usepackage{changepage}
+\newenvironment{citar}
+{\begin{adjustwidth}{4cm}{0cm}\SingleSpacing\footnotesize\par}
+{\end{adjustwidth}}
+
+%Texto da folha de rosto (tipo de trabalho)
+\newenvironment{textofolharosto}
+{\SingleSpacing\small\list{}{\rightmargin=0cm \leftmargin=7cm}%
+	\item\relax}%
+{\endlist}
+
+%Definições dos capítulos
+\chapterstyle{section}%Título somente com o número e o nome, sem "Capítulo X" da classe
+\pagestyle{simple}
+\aliaspagestyle{part}{empty}
+\setsecnumdepth{subsubsection}
+
+%Caixa de texto para uso com códigos
+\usepackage{tcolorbox}
+\tcbuselibrary{most,listingsutf8}% 
+\newtcblisting[auto counter,number within=chapter]{codex}[2][]{%
+	arc=0mm,
+	listing only,
+	colback=black!5!white,
+	colframe=black!75!white,
+	fonttitle=\bfseries,
+	title=Exemplo \thetcbcounter: #1 #2,
+	listing options={style=tcblatex,numbersep=1mm,numbers=left,numberstyle=\tiny\color{black}}
+}

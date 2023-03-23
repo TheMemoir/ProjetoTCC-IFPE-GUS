@@ -1,0 +1,63 @@
+%PREENCHA OS CAMPOS ABAIXO COM AS INFORMAÇÕES DO SEU TRABALHO
+\author{Nome completo do autor}
+\title{Título do projeto}
+%Data da defesa. Apenas mês e ano.
+%Mude o mês para informar a data de apresentação do PROJETO
+\date{Jan. \the\year{}{}}
+
+%INFORMAÇÕES DA INSTITUIÇÃO, CURSO E ORIENTADOR
+\newcommand{\instituicao}{Instituto Federal de Pernambuco}
+\newcommand{\campus}{Campus Garanhuns}
+\newcommand{\localdefesa}{Garanhuns - PE}
+\newcommand{\curso}{Tecnólogo em Análise e Desenvolvimento de Sistemas}
+\newcommand{\orientador}[1]{\textbf{Orientador/a:} #1}
+
+%FORMATAÇÃO DO ELEMENTOS PRÉ-TEXTUAIS - NÃO ALTERAR
+%Capa
+\begin{center}
+%CAPA
+%CASO NÃO DESEJE O LOGO DA INSTITUIÇÃO, EXCLUIR LINHA ABAIXO.
+\includegraphics[scale=.10]{./img/logo-ifpe.png}\\
+\textbf{\textsc{\instituicao}}\\
+%Caso sua instituição não tenha CAMPUS, remova o comando \campus.
+\textbf{\textsc{\campus}}\\
+
+\vspace*{5cm}
+\textbf{\thetitle}\\
+\textbf{\theauthor}
+
+\vspace*{\fill}
+\localdefesa\\
+\thedate
+\end{center}
+
+%FOLHA DE ROSTO + TIPO DE TRABALHO
+\frontmatter{
+\newpage
+\thispagestyle{empty}
+\begin{center}
+	\textbf{\theauthor}
+	
+	\vspace*{5cm}
+	\textbf{\thetitle}
+\end{center}
+%Caso sua instituição não tenha CAMPUS, remova o comando \campus.
+%ATENÇÃO À PRESPOSIÇÃO "AO/À"
+	\vspace*{2cm}
+	\begin{textofolharosto}
+	Projeto de trabalho de conclusão de curso apresentado ao \instituicao\ \campus\ como requisito para elaboração do trabalho final do curso de \curso.\\
+	\ \\
+    \ \\
+    \orientador {Nome do orientador}
+	\end{textofolharosto}
+
+\begin{center}
+\vspace*{\fill}
+\localdefesa\\
+\thedate
+\end{center}
+
+%RESUMO e ABSTRACT
+%Ler instruções em resumo+abstract.tex
+%\input{pretxt/resumo+abstract.tex}
+

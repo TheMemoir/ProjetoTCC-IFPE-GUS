@@ -1,0 +1,150 @@
+%As referências aqui apresentadas são apenas modelos 
+%conforme o tipo de trabalho.
+%Copie e cole cada modelo e em seguida
+%preencha com as informações bibliográficas corretas.
+
+%============================================
+%Livro com um ou mais autores sem (Org.)
+@book{eagleton2011,
+	author     = {Terry Eagleton},
+	title      = {A ideia de cultura},
+	edition    = {2},
+	address   = {São Paulo},
+	publisher  = {Editora UNESP},
+	year       = {2011},
+	translator = {Sandra Castello Branco},
+}
+
+@book{dosto2013,
+	author     = {Fiódor Dostoi{\'e}vski},
+	title      = {O duplo},
+	edition    = {},
+	address    = {São Paulo},
+	publisher  = {Editora 34},
+	year       = {2013},
+	translator = {Paulo Bezerra},
+}
+%============================================
+%Livro com diversos autores com (Org.)
+%Referencia-se primeiro o Org. com a entrada @ collection, em seguida
+%faz-se a referência cruzada.
+@collection{Schnaiderman2010,
+	editor     = {Boris Schnaiderman},
+	editortype = {organizer},
+	title      = {Semiótica russa},
+	edition    = {2},
+	address   = {São Paulo},
+	publisher  = {Perspectiva},
+	year       = {2010},
+}
+%Referência cruzada.
+@incollection{Lotman2010,
+	crossref   = {Schnaiderman2010},
+	author     = {I. M. Lotman},
+	title      = {Sobre o problema da tipologia da cultura},
+	translator = {Lucy Seki},
+}
+
+%Outro teste.
+@collection{dionisioetal2005,
+	editor     = {Angela P. Dionísio and Anna R. Machado and Maria A. Bezerra},
+	editortype = {Org.},
+	title      = {Gêneros textuais e ensino},
+	edition    = {4},
+	address   = {Rio de Janeiro},
+	publisher  = {Lucerna},
+	year       = {2005},
+}
+%Referência cruzada.
+@incollection{Marcuschi2005,
+	crossref   = {dionisioetal2005},
+	author     = {Luiz Antônio Marcuschi},
+	title      = {Gêneros textuais: definição e funcionalidade},
+}
+
+%============================================
+%Artigo (impresso ou online)
+@article{fiorin1999,
+	title   = {Sendas e veredas da semiótica narrativa e discursiva},
+	author  = {José Luiz Fiorin},
+	journal = {DELTA},
+	volume  = {15},
+	number  = {1},
+	month   = {Fev.},
+	year    = {1999},
+	pages   = {977-985},
+	doi     = {https://doi.org/10.1590/S0102-44501999000100009},
+	url     = {https://www.scielo.br/j/delta/a/3hbG65rCHs6H8stNtxZdmwH/?lang=pt},
+	urlaccessdate = {23 jun. 2023},
+}
+
+%============================================
+%Dissertação de mestrado
+@thesis{leitao2006,
+	author      = {André Alexandre Padilha Leitão},
+	title       = {Logs de bate-papos virtuais: retextualização},
+	type        = {Dissertação (Mestrado em Letras)},
+	institution = {Universidade Federal de Pernambuco},
+	address    = {Recife/PE},
+	month       = {mar.},
+	year        = {2006},
+	eventyear   = {2006},
+}
+
+%============================================
+%Tese de doutorado
+@thesis{leitao2010,
+	author      = {André Alexandre Padilha Leitão},
+	title       = {Formas e funções da autoria},
+	type        = {Tese (Doutorado em Letras)},
+	institution = {Universidade Federal de Pernambuco},
+	address    = {Recife/PE},
+	month       = {mar.},
+	year        = {2010},
+	eventyear   = {2010},
+}
+
+%============================================
+%Normas técnicas e manuais
+@manual{abntex2018,
+	organization = {ABNTEX},
+	title        = {O pacote abntex2cite},
+	subtitle     = {Estilos bibliográficos compat{\'i}veis com a ABNT NBR 6023},
+	address     = {},
+	year		 = {2018},
+	pagetotal	 = {95},
+    url          = {https://linorg.usp.br/CTAN/macros/latex/contrib/abntex2/doc/abntex2cite.pdf},
+	urlaccessdate      = {10 abr. 2019},
+}
+
+@manual{abnt6023,
+	organization = {Associa{\c c}{\~a}o Brasileira de Normas T{\' e}cnicas},
+	title        = {NBR6023},
+	subtitle     = {Informação e documentação --- Referências --- Elaboração},
+	location     = {Rio de Janeiro},
+	year		 = {2018},
+	pagetotal	 = {74},
+}
+
+@manual{abnt10520,
+	organization = {Associa{\c c}{\~a}o Brasileira de Normas T{\' e}cnicas},
+	title        = {NBR10520},
+	subtitle     = {Informação e documentação --- Citações
+em documentos - Apresentação --- Elaboração},
+	location     = {Rio de Janeiro},
+	year		 = {2002},
+	pagetotal	 = {7},
+}
+
+%============================================
+%Legislação (@ book em BibLatex)
+@book{ldb9394,
+	author   = {Brasil},
+	title    = {Lei nº 9.394, de 20 de dezembro de 1996},
+	subtitle = {Estabelece as diretrizes e bases da educação nacional.},
+	year     = {1996},
+	address = {Brasília, DF},
+	publisher= {Diário Oficial. República Federativa do Brasil},
+	url      = {http://www.planalto.gov.br/ccivil_03/leis/l9394.htm},
+	urlaccessdate  = {2023-03-06},
+}
